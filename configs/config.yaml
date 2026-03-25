@@ -1,0 +1,23 @@
+seed: 42
+device: cuda
+
+data:
+  root_dir: data
+  img_size: 512
+  batch_size: 8
+  num_workers: 4
+
+model:
+  encoder: resnet34
+  encoder_weights: imagenet
+  classes: 1
+  in_channels: 3
+
+training:
+  epochs: 50
+  lr: 0.0001
+  weight_decay: 0.0001
+  
+logging:
+  log_dir: assets/logs
+  checkpoint_dir: assets/weights
