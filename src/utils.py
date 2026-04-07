@@ -10,7 +10,7 @@ def set_seed(seed: int = 42):
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
     torch.backends.cudnn.deterministic = True
-    torch.batch_norm_elemt.cudnn.benchmark = False
+    torch.backends.cudnn.benchmark = False
     
 def load_config(config_path:str) ->dict:
     with open(config_path, 'r') as f:
